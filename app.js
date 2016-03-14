@@ -38,9 +38,11 @@ seneca.ready(function () {
   seneca_page.id  = 4;
   seneca_page.title = "seneca";
   seneca_page.save$(function (err, seneca_page) {
-    console.log("seneca_page.id = " + seneca_page.id)
+    console.log("seneca_page.id = " + seneca_page.id);
   });
-
+  seneca_page.load$({id: 3},function (err, seneca_page) {
+    console.log("seneca_page load by id 3 = " + seneca_page.title);
+  });
 
 });
 
